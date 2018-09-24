@@ -64,7 +64,7 @@ if (vm.$vnode == null) {
   }
 ```
 
-### 这个方法不断遍历插入到队列里面的vnode队列。每一个queue[i]是一个组件，而insert方法就是每一个字组件的钩子函数。具体定义是在core/vdom/create-component.js中。
+### 这个方法不断遍历插入到队列里面的vnode队列。每一个queue[i]是一个组件，而insert方法就是每一个字组件的钩子函数。具体定义是在core/vdom/create-component.js中。如果组件没有挂载，则将组件isMounted设为真，并调用mounted生命周期函数钩子。
 ```
 insert (vnode: MountedComponentVNode) {
     const { context, componentInstance } = vnode
