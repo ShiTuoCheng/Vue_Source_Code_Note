@@ -27,7 +27,7 @@ export function callHook (vm: Component, hook: string) {
 
 ### 在core/instance/init.js中的initMixin的初始化混入函数的_init()中
 ```js
-	initLifecycle(vm)
+    initLifecycle(vm)
     initEvents(vm)
     initRender(vm)
     callHook(vm, 'beforeCreate')
